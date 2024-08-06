@@ -21,6 +21,8 @@ const Login = () => {
   }
 
   const handleSubmit = async()=>{
+    console.log("in submit");
+    
     try {
       if(data.username===''|| data.password==='')
         alert("All fields are required")
@@ -44,8 +46,9 @@ const Login = () => {
         navigate('/')
       }
     } catch (error) {
-      console.log(error);
+      console.log("hi");
       
+      console.log(error);
       alert(error.response.data.message)
     }
   }
