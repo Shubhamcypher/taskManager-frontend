@@ -5,6 +5,8 @@ import {authActions} from '../store/auth'
 import {useDispatch, useSelector} from 'react-redux'
 
 const Login = () => {
+  console.log("helllo");
+  
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
