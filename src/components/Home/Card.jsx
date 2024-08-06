@@ -82,7 +82,7 @@ const handleDeleteTask = async (id)=>{
               
 
 
-              { home == 'true' && (<button onClick={()=>handleEditTask(items._id,items.title,items.description,items.due)}><MdEdit /></button>)}
+              { home === 'true' && (<button onClick={()=>handleEditTask(items._id,items.title,items.description,items.due)}><MdEdit /></button>)}
               <button onClick={()=>handleDeleteTask(items._id)}><FcEmptyTrash /></button>
             </div>
           </div>
