@@ -30,7 +30,7 @@ const Login = () => {
         console.log("hello from login");
         
         console.log(data);
-        const res = await axios.post('https://task-manager-psi-sage.vercel.app/api/v1/log-in',data);
+        const res = await axios.post('https://localhost:8000/api/v1/log-in',data);
            console.log(res);
            
         setData({username:'',password:''})
