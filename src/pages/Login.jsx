@@ -5,8 +5,6 @@ import {authActions} from '../store/auth'
 import {useDispatch, useSelector} from 'react-redux'
 
 const Login = () => {
-  console.log("helllo");
-  
   const navigate = useNavigate()
   const dispatch = useDispatch()
 
@@ -20,8 +18,6 @@ const Login = () => {
   const handleChange = (e)=>{
     const {name, value} = e.target;
     setData({...data,[name]:value})
-    console.log(data);
-    
   }
 
   const handleSubmit = async()=>{
@@ -34,7 +30,7 @@ const Login = () => {
         console.log("hello from login");
         
         console.log(data);
-        const res = await axios.post('https://task-manager-psi-sage.vercel.app/v1/log-in',data);
+        const res = await axios.post('https://task-manager-psi-sage.vercel.app/api/v1/log-in',data);
            console.log(res);
            
         setData({username:'',password:''})
