@@ -11,7 +11,7 @@ const IncompletedTasks = () => {
 }
   useEffect(() => {
     const fetch = async()=>{
-      const res = await axios.get('http://localhost:8000/api/v2/get-incomplete-tasks',{headers})
+      const res = await axios.get('https://task-manager-psi-sage.vercel.app/api/v2/get-incomplete-tasks',{headers})
       setUserData(res.data.data);
       
   }

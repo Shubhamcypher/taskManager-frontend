@@ -50,7 +50,7 @@ const Sidebar = () => {
     }
     useEffect(() => {
       const fetch = async()=>{
-        const res = await axios.get('http://localhost:8000/api/v2/get-all-tasks',{headers})
+        const res = await axios.get('https://task-manager-psi-sage.vercel.app/api/v2/get-all-tasks',{headers})
         setUserData(res.data.data);
     }
       fetch();

@@ -22,7 +22,7 @@ const InputData = ({InputDiv, setInputDiv, updatedTaskData, setUpdatedTaskData})
             alert('All fields are mandatory')
         }
         else{
-            const res = await axios.post('http://localhost:8000/api/v2/create-task',taskData,{headers})
+            const res = await axios.post('https://task-manager-psi-sage.vercel.app/api/v2/create-task',taskData,{headers})
             setTaskData({title:'', description:'', due:''})
             setInputDiv('hidden')
 
@@ -35,7 +35,7 @@ const InputData = ({InputDiv, setInputDiv, updatedTaskData, setUpdatedTaskData})
             alert('All fields are mandatory')
         }
         else{
-            await axios.put(`http://localhost:8000/api/v2/update-task/${updatedTaskData.id}`,taskData,{headers})
+            await axios.put(`https://task-manager-psi-sage.vercel.app/api/v2/update-task/${updatedTaskData.id}`,taskData,{headers})
             setUpdatedTaskData({
                 id:'',
                 title:'',

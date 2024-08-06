@@ -27,14 +27,14 @@ const Card = ({ home, setInputDiv, data, setUpdatedTaskData }) => {
 
 const handleCompleteTask = async (id)=>{
   try {
-    const res = await axios.patch(`http://localhost:8000/api/v2/update-completed-task/${id}`,{},{headers})
+    const res = await axios.patch(`https://task-manager-psi-sage.vercel.app/api/v2/update-completed-task/${id}`,{},{headers})
   } catch (error) {
     console.log(error);
   }
 }
 const handleImportantTask = async (id)=>{
   try {
-    const res=await axios.patch(`http://localhost:8000/api/v2/update-important-task/${id}`,{},{headers})
+    const res=await axios.patch(`https://task-manager-psi-sage.vercel.app/api/v2/update-important-task/${id}`,{},{headers})
   } catch (error) {
     console.log(error);
   }
@@ -45,7 +45,7 @@ const handleEditTask = async (id,title,description,due)=>{
 }
 const handleDeleteTask = async (id)=>{
   try {
-    const res = await axios.delete(`http://localhost:8000/api/v2/delete-task/${id}`,{headers})
+    const res = await axios.delete(`https://task-manager-psi-sage.vercel.app/api/v2/delete-task/${id}`,{headers})
     alert(res.data.message);
   } catch (error) {
     console.log(error);
