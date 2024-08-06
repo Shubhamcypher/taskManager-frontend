@@ -26,9 +26,9 @@ const Login = () => {
         alert("All fields are required")
       else{
         const res = await axios.post('https://task-manager-psi-sage.vercel.app/api/v1/log-in',
-          headers: {
+          {headers: {
             'Access-Control-Request-Headers': 'Content-Type'
-          },
+          }},
            data);
         setData({username:'',password:''})
         localStorage.setItem("id", res.data.id)
