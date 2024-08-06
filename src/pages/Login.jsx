@@ -35,7 +35,7 @@ const Login = () => {
           }
         },
            data);
-           console.log(data);
+           console.log(res);
            
         setData({username:'',password:''})
         localStorage.setItem("id", res.data.id)
