@@ -18,6 +18,8 @@ const Login = () => {
   const handleChange = (e)=>{
     const {name, value} = e.target;
     setData({...data,[name]:value})
+    console.log(data);
+    
   }
 
   const handleSubmit = async()=>{
