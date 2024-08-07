@@ -69,7 +69,7 @@ const InputData = ({InputDiv, setInputDiv, updatedTaskData, setUpdatedTaskData})
         <div className={`${InputDiv} fixed bg-gray-500 top-0 left-0 opacity-50 h-screen w-full `}>
         </div>
         <div className={`${InputDiv} fixed  top-0 left-0 flex items-center justify-center h-screen w-full` }>
-            <div className='w-3/6 bg-gray-500 p-4 rounded-lg'>
+            <div className='lg:w-3/6 bg-gray-500 p-4 rounded-lg'>
                 <div className='flex justify-end mb-4'>
                     <button className=' hover:scale-125 hover:text-red-400 text-xl transition-all duration-300' onClick={()=>{
                         setInputDiv('hidden')
