@@ -23,6 +23,7 @@ const IncompletedTasks = () => {
   }, [userData])
   return (
     <div>
+      <p className='font-bold text-2xl text-red-600'>Incomplete Tasks</p>
       <Card home={"false"} data={userData}/>
     </div>
   )

@@ -23,6 +23,7 @@ const CompletedTasks = () => {
   }, [userData])
   return (
     <div>
+      <p className='font-bold text-2xl text-green-600'>Completed Tasks</p>
       <Card home={"false"} data={userData}/>
     </div>
   )

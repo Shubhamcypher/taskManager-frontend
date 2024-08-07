@@ -23,6 +23,7 @@ const ImportantTasks = () => {
   }, [userData])
   return (
     <div>
+      <p className='font-bold text-2xl text-blue-400'>Important Tasks</p>
       <Card home={"false"} data={userData}/>
     </div>
   )

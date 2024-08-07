@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react'
-import { FcGrid } from "react-icons/fc";
+import { FcSalesPerformance } from "react-icons/fc";
 import { FcApproval } from "react-icons/fc";
-import { FcHighPriority } from "react-icons/fc";
-import { FcBearish } from "react-icons/fc";
+import { FcInfo } from "react-icons/fc";
+import { FcCancel } from "react-icons/fc";
 import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 import { authActions } from '../../store/auth';
@@ -23,12 +23,12 @@ const Sidebar = () => {
     const data = [
         {
             "title":"All Tasks",
-            "icon":<FcGrid />,
+            "icon":<FcSalesPerformance />,
             "link":"/"
         },
         {
             "title":"Important Tasks",
-            "icon":<FcHighPriority />,
+            "icon":<FcInfo />,
             "link":"/important"
         },
         {
@@ -38,7 +38,7 @@ const Sidebar = () => {
         },
         {
             "title":"Incompleted Tasks",
-            "icon":<FcBearish />,
+            "icon":<FcCancel />,
             "link":"/incompleted"
         },
 
@@ -69,12 +69,12 @@ const Sidebar = () => {
             <br/>
             <hr/>
         </div>)}
-        <div className=''>
+        <div className='inline-block'>
             {data.map((items,i)=>(
                 <Link
                  to={items.link}
                  key={i}
-                className='my-2 flex items-center gap-2 p-2 rounded-md cursor-pointer text-xl hover:bg-gray-500 transition-all duration-100'>
+                className='my-2 flex items-center gap-2 p-1 rounded-md cursor-pointer text-xl hover:bg-gray-500 transition-all duration-100'>
                     {items.icon}
                     {items.title}
                 </Link>
