@@ -21,22 +21,15 @@ const Login = () => {
   }
 
   const handleSubmit = async()=>{
-    console.log("in submit");
-    
     try {
       if(data.username===''|| data.password==='')
         alert("All fields are required")
       else{
-        console.log("hello from login");
-        
-        console.log(data);
         const res = await axios.post('https://task-manager-psi-sage.vercel.app/api/v1/log-in',data,{
           headers: {
             'Access-Control-Request-Headers': 'Content-Type'
           }
         });
-           console.log(res);
-           
         setData({username:'',password:''})
         localStorage.setItem("id", res.data.id)
         localStorage.setItem("token", res.data.token)
@@ -44,9 +37,6 @@ const Login = () => {
         navigate('/')
       }
     } catch (error) {
-      console.log("hi");
-      
-      console.log(error);
       alert(error.response.data.message)
     }
   }
