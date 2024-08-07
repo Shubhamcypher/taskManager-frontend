@@ -11,7 +11,11 @@ const ImportantTasks = () => {
 }
   useEffect(() => {
     const fetch = async()=>{
-      const res = await axios.get('https://task-manager-psi-sage.vercel.app/api/v2/get-important-tasks',{headers})
+      const res = await axios.get('https://task-manager-psi-sage.vercel.app/api/v2/get-important-tasks',{headers},{
+        headers: {
+          'Access-Control-Request-Headers': 'Content-Type'
+        }
+      })
       setUserData(res.data.data);
       
   }

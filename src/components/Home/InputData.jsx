@@ -22,7 +22,11 @@ const InputData = ({InputDiv, setInputDiv, updatedTaskData, setUpdatedTaskData})
             alert('All fields are mandatory')
         }
         else{
-            const res = await axios.post('https://task-manager-psi-sage.vercel.app/api/v2/create-task',taskData,{headers})
+            const res = await axios.post('https://task-manager-psi-sage.vercel.app/api/v2/create-task',taskData,{headers},{
+                headers: {
+                  'Access-Control-Request-Headers': 'Content-Type'
+                }
+              })
             setTaskData({title:'', description:'', due:''})
             setInputDiv('hidden')
 
@@ -35,7 +39,11 @@ const InputData = ({InputDiv, setInputDiv, updatedTaskData, setUpdatedTaskData})
             alert('All fields are mandatory')
         }
         else{
-            await axios.put(`https://task-manager-psi-sage.vercel.app/api/v2/update-task/${updatedTaskData.id}`,taskData,{headers})
+            await axios.put(`https://task-manager-psi-sage.vercel.app/api/v2/update-task/${updatedTaskData.id}`,taskData,{headers},{
+                headers: {
+                  'Access-Control-Request-Headers': 'Content-Type'
+                }
+              })
             setUpdatedTaskData({
                 id:'',
                 title:'',

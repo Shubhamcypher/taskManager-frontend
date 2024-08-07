@@ -11,7 +11,11 @@ const CompletedTasks = () => {
 }
   useEffect(() => {
     const fetch = async()=>{
-      const res = await axios.get('https://task-manager-psi-sage.vercel.app/api/v2/get-completed-tasks',{headers})
+      const res = await axios.get('https://task-manager-psi-sage.vercel.app/api/v2/get-completed-tasks',{headers},{
+        headers: {
+          'Access-Control-Request-Headers': 'Content-Type'
+        }
+      })
       setUserData(res.data.data);
       
   }
