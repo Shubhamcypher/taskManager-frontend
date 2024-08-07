@@ -38,7 +38,7 @@ const Signup = () => {
   }
   return (
     <div className=' h-[98vh] bg-gray-800 flex items-center justify-center'>
-        <div className='p-4 w-2/6 rounded bg-gray-700'>
+        <div className='p-4 lg:w-2/6 rounded bg-gray-700'>
             <div className='font-bold text-2xl mb-2'>Signup</div>
             <input type='text' name='username' value={data.username} placeholder='username' onChange={handleChange} className='w-full px-3 py-2 my-3 text-gray-200 rounded bg-gray-600'/>
             <input type='text' name='email' value={data.email} placeholder='email' onChange={handleChange} className='w-full px-3 py-2 my-3 text-gray-200 rounded bg-gray-600'/>

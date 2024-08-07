@@ -42,7 +42,7 @@ const Login = () => {
   }
   return (
     <div className=' h-[98vh] bg-gray-800 flex items-center justify-center'>
-        <div className='p-4 w-2/6 rounded bg-gray-700'>
+        <div className='p-4 lg:w-2/6 rounded bg-gray-700'>
             <div className='font-bold text-2xl mb-2'>Log in</div>
             <input type='text' name='username' placeholder='username' value={data.username} onChange={handleChange} className='w-full px-3 py-2 my-3 text-gray-200 rounded bg-gray-600'/>
             <input type='password' name='password' placeholder='password' value={data.password} onChange={handleChange} className='w-full px-3 py-2 my-3 text-gray-200 rounded bg-gray-600'/>
