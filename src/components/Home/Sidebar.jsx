@@ -69,7 +69,7 @@ const Sidebar = () => {
             <br/>
             <hr/>
         </div>)}
-        <div>
+        <div className='sm:hidden'>
             {data.map((items,i)=>(
                 <Link
                  to={items.link}
