@@ -37,7 +37,7 @@ const Sidebar = () => {
             "link":"/completed"
         },
         {
-            "title":"Incompleted Tasks",
+            "title":"Incomplete Tasks",
             "icon":<FcCancel />,
             "link":"/incompleted"
         },
