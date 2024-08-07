@@ -67,7 +67,7 @@ const handleDeleteTask = async (id)=>{
 
 
   return (
-    <div className='grid grid-cols-3 gap-4 p-4 cursor-default'>
+    <div className='grid grid-cols-3 gap-4 p-4 cursor-default sm:grid-cols-1'>
       {data && data.map((items, i) => (
         <div key={i} className='bg-gray-700 flex flex-col justify-between rounded-xl p-4 border relative'>
           <div className='absolute top-0 left-0 text-gray-100 bg-purple-500 text-lg rounded-lg m-1 p-1  font-semibold'>
