@@ -61,7 +61,7 @@ const Sidebar = () => {
     }, [])
     
   return (
-    <>
+    <div className='lg:block sm:hidden'>
         {userData && (
             <div>
             <h2 className='text-xl font-semibold'>{userData.username}</h2>
@@ -69,7 +69,7 @@ const Sidebar = () => {
             <br/>
             <hr/>
         </div>)}
-        <div className='sm:hidden'>
+        <div className=''>
             {data.map((items,i)=>(
                 <Link
                  to={items.link}
@@ -83,7 +83,7 @@ const Sidebar = () => {
         <div className=''>
             <button onClick={handleLogout} className='bg-red-500 w-full rounded-md p-3 text-gray-300 mb-8 hover:bg-red-600 hover:font-bold'>Logout</button>
         </div>
-    </>
+    </div>
     
   )
 }
