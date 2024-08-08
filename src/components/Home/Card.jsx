@@ -69,7 +69,7 @@ const handleDeleteTask = async (id)=>{
   return (
     <div className='grid lg:grid-cols-3 gap-4 p-4 cursor-default sm:grid-cols-1'>
       {data && data.map((items, i) => (
-        <div key={i} className='bg-gray-700 flex flex-col justify-between rounded-xl p-4 border relative'>
+        <div key={i} className='bg-gray-900 flex flex-col justify-between rounded-xl p-4 border relative'>
           <div className='absolute top-0 left-0 text-gray-100 bg-purple-500 text-lg rounded-lg m-1 p-1  font-semibold'>
             {formatDate(items.due)}
           </div>
@@ -101,7 +101,7 @@ const handleDeleteTask = async (id)=>{
         </div>
       ))}
       {home === "true" && (
-        <div className='bg-gray-700 flex flex-col justify-center items-center rounded-xl p-4 border hover:scale-105 transition-all duration-300 cursor-pointer' onClick={()=>setInputDiv('fixed')}>
+        <div className='bg-gray-950 flex flex-col justify-center items-center rounded-xl p-4 border hover:scale-105 transition-all duration-300 cursor-pointer' onClick={()=>setInputDiv('fixed')}>
           <IoIosAddCircle className='text-5xl ' />
           <h2 className='text-xl mt-4'>Add Task</h2>
         </div>

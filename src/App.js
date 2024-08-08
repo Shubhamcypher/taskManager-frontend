@@ -28,7 +28,7 @@ import { authActions } from './store/auth.js';
   
   
   return (
-      <div className='bg-gray-800 text-white min-h-screen p-4 relative'>
+      <div className='bg-black text-white min-h-screen p-4 relative' style={{backgroundImage: 'url(/background.jpg)', backgroundSize: 'cover' }}>
         <Routes>
           <Route exact path="/" element={<Home/>} >
             <Route index element={<AllTasks/>} />
